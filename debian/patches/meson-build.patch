@@ -2,7 +2,7 @@ Index: host-sflow/meson.build
 ===================================================================
 --- /dev/null
 +++ host-sflow/meson.build
-@@ -0,0 +1,39 @@
+@@ -0,0 +1,38 @@
 +project('host-sflow', 'c',
 +        version: '1.0.0',
 +        default_options: [
@@ -36,8 +36,7 @@ Index: host-sflow/meson.build
 +host_sflow_dev_library = static_library(
 +        'host-sflow',
 +        sources: host_sflow_dev_sources,
-+        install: true,
-+        version: '1.0.0'
++        install: true
 +)
 +
 +pkg = import('pkgconfig')

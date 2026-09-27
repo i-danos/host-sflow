@@ -1,3 +1,13 @@
+host-sflow (2.0.36-1vyatta2) unstable; urgency=medium
+
+  * meson-build.patch: drop the version keyword from the static_library()
+    call in meson.build. static_library() has no soname to version, and
+    current meson (1.x, as shipped in Debian 13) rejects it as an unknown
+    keyword argument instead of ignoring it as older meson did, which broke
+    the build outright ("Got unknown keyword arguments 'version'").
+
+ -- DANOS <noreply@danos.io>  Mon, 28 Sep 2026 07:07:16 +0800
+
 host-sflow (2.0.36-1vyatta1) unstable; urgency=medium
 
   * Initial release
